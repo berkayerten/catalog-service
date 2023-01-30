@@ -13,7 +13,7 @@ import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(BookController.class)
-public class BookControllerMvcTests {
+class BookControllerMvcTests {
     @Autowired
     private MockMvc mockMvc;
     @MockBean
@@ -26,6 +26,6 @@ public class BookControllerMvcTests {
                 .willThrow(BookNotFoundException.class);
         mockMvc
                 .perform(get("/books/" + isbn))
-                .andExpect(status().isFound());
+                .andExpect(status().isNotFound());
     }
 }
