@@ -1,0 +1,20 @@
+Command-Line Arguments:
+java -jar build/libs/catalog-service-0.0.1-SNAPSHOT.jar \
+--polar.greeting="Welcome to the catalog from CLI"
+
+JVM Arguments:
+java -Dpolar.greeting="Welcome to the catalog from JVM" \
+-jar build/libs/catalog-service-0.0.1-SNAPSHOT.jar
+
+Mixed:
+java -Dpolar.greeting="Welcome to the catalog from JVM" \
+-jar build/libs/catalog-service-0.0.1-SNAPSHOT.jar \
+--polar.greeting="Welcome to the catalog from CLI"
+
+--> Prints: Welcome to the catalog from CLI
+
+Environment:
+POLAR_GREETING="Welcome to the catalog from ENV" \
+java -jar build/libs/catalog-service-0.0.1-SNAPSHOT.jar
+
+

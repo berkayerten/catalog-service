@@ -1,0 +1,5 @@
+Actuator endpoint for refreshing the Scope (Hot Reload)
+http POST :9001/actuator/refresh
+ - This will trigger RefreshScopeRefreshedEvent
+ - @RefreshScope can be used on a bean
+ - @ConfigurationProperties annotation already listens to RefreshScopeRefreshedEvent

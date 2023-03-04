@@ -1,0 +1,9 @@
+When application reading from the configuration the prioritization is as:
+
+1- @TestPropertySource annotations on test classes
+2- Command-line arguments
+3- JVM System properties from System.getProperties()
+4- OS environment variables from System.getenv()
+5- Configuration data files
+6- @PropertySource annotations on @Configuration classes
+7- Default properties from SpringApplication.setDefaultProperties
